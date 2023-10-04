@@ -1,1 +1,31 @@
-Testing 'pgcert.handlebars'....
+<div>
+    <p>PGCert Lecture PDFs</p>
+    <ul>
+        {{#each pdfs}}
+        <li>
+            <img src="./files/pdf_icon.png" width="20" height="20">
+            <a href="./files/{{this}}">{{this}}</a>
+        </li>
+        {{/each}}
+    </ul>
+    <p>PGCert PowerPoints</p></p>
+    <ul>
+        {{#each pptxs}}
+        <li>
+            <img src="./files/pptx_icon.png" width="20" height="20">
+            <a href="./files/{{this}}">{{this}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+ <form action="./uploadFile" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="inpFile">Upload an image here!</label>
+        <input id="inpFile" type="file" name="file" accept=".pdf,.pptx">
+    </div>
+
+    <div>
+        <button type="submit">Upload!</button>
+    </div>
+</form>
