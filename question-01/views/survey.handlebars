@@ -1,0 +1,49 @@
+<div class="survey">
+    <h1>PGCert Developer Survey</h1>
+    <h2>Developer name: {{name}}</h2>
+    <p>Favorite languages:</p>
+    {{#if languages}}
+        <ul>
+            {{#each languages}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>no Favourite languages</p>
+    {{/if}}
+
+    <P>Interests</P>
+    {{#if interests}}
+        <ul>
+            {{#each interests}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>no Interests</p>
+    {{/if}}
+
+    <P>{{name}} spens {{writing}}% of their time writing code.
+        {{debugging}}% of their time debugging and {{stackoverflow}}% of their time on Stack Overflow.
+    </P>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Goal</th>
+                <th>Time to complete</th>
+            </tr>
+        </thead>
+        <tbody>
+             {{#each goals}}
+            <tr>
+               
+                <td>{{this.goal}}</td>
+                <td>{{this.time}}</td>
+                
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+</div>
